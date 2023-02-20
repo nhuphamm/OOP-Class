@@ -7,11 +7,6 @@ class Customer:
         self.__phone = phone
         self.__member_status = member_status
 
-    def is_member(self):
-        self.__member_status = True
-
-    # def not_member(self):
-    #     self.__member_status = False
     def get_customerid(self):
         return self.__customerid
 

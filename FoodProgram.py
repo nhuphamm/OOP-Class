@@ -12,6 +12,7 @@ dict = {
 }
 
 order_total = 0
+
 """
 cus1 = fc.Customer(
     570,
@@ -31,6 +32,7 @@ cus1 = fc.Customer(
     True,
 )
 
+
 transaction = []
 costs = []
 item_names = []
@@ -43,15 +45,13 @@ for key, values in dict.items():
         member_status = customer.get_member_status()
         costs.append(cost)
         item_names.append(item_name)
-    # elif customerid == cus2.get_customerid():
-    # customer = cus2
+
     else:
         continue
 
     transaction = fc.Transaction(date, item_name, cost, customerid)
     order_total += transaction.get_cost()
 
-# if customer.is_member():
 if member_status == True:
     discount = order_total * 0.2
     # order_total -= discount
